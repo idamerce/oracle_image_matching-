@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="472.0" prefWidth="945.0" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keep.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutY="27.0" prefHeight="439.0" prefWidth="1001.0">
+         <children>
+            <AnchorPane id="pane1" fx:id="pane1" layoutX="641.0" layoutY="-3.0" prefHeight="470.0" prefWidth="453.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label alignment="CENTER" layoutX="45.0" layoutY="135.0" prefHeight="43.0" prefWidth="100.0" text="texture     : ">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="45.0" layoutY="186.0" prefHeight="43.0" prefWidth="100.0" text="color       :">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="44.0" layoutY="241.0" prefHeight="43.0" prefWidth="102.0" text="Shap       :">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="45.0" layoutY="300.0" prefHeight="43.0" prefWidth="100.0" text="Location  :">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXSlider id="texture1" fx:id="texture1" blockIncrement="0.01" layoutX="163.0" layoutY="152.0" majorTickUnit="0.25" max="1.0" minorTickCount="5" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" />
+                  <JFXSlider id="location1" fx:id="location1" blockIncrement="0.01" layoutX="163.0" layoutY="316.0" majorTickUnit="0.25" max="1.0" minorTickCount="5" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" />
+                  <JFXSlider id="shap1" fx:id="shap1" blockIncrement="0.01" layoutX="163.0" layoutY="257.0" majorTickUnit="0.25" max="1.0" minorTickCount="5" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" />
+                  <JFXSlider id="color1" fx:id="color1" blockIncrement="0.01" layoutX="162.0" layoutY="202.0" majorTickUnit="0.25" max="1.0" minorTickCount="5" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" />
+                  <JFXButton id="next" fx:id="next" layoutX="181.0" layoutY="368.0" onAction="#handleButtonAction" prefHeight="88.0" prefWidth="86.0" text=" ">
+                     <graphic>
+                        <ImageView id="next" fitHeight="80.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/next_page_100px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="choose_image" layoutX="17.0" layoutY="64.0" onAction="#singleFilechooser" prefHeight="43.0" prefWidth="156.0" style="-fx-border-color: #1A33D5; -fx-border-radius: 10 10 10 10; -fx-border-width: 1.4;" text="Choose Image">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="pane2" fx:id="pane2" layoutX="641.0" layoutY="-3.0" prefHeight="471.0" prefWidth="453.0" style="-fx-background-color: #ffffff;" visible="false">
+               <children>
+                  <JFXRadioButton id="db" fx:id="db" layoutX="120.0" layoutY="199.0" onAction="#handleButtonAction" text="DATABASE ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton id="dir" fx:id="dir" layoutX="122.0" layoutY="251.0" onAction="#handleButtonAction" text="DIRECTORY ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label layoutX="46.0" layoutY="144.0" prefHeight="37.0" prefWidth="291.0" text="Choose your Work Space">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton id="next2" fx:id="next2" layoutX="175.0" layoutY="361.0" onAction="#handleButtonAction" prefHeight="81.0" prefWidth="104.0" text=" ">
+                     <graphic>
+                        <ImageView id="next" fitHeight="80.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/next_page_100px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="pane3" fx:id="pane3" layoutX="640.0" prefHeight="467.0" prefWidth="453.0" style="-fx-background-color: #ffffff;" visible="false">
+               <children>
+                  <JFXButton id="choosefolder" fx:id="choosefolder" alignment="BASELINE_LEFT" layoutX="115.0" layoutY="207.0" onAction="#folderFilechooser" prefHeight="37.0" prefWidth="184.0" styleClass="button1" stylesheets="@../css/css.css" text="choose Folder " textFill="#fffdfd">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/upload.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="27.0" layoutY="125.0" prefHeight="56.0" prefWidth="156.0" text="Select Folder  :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXButton id="next3" fx:id="next3" layoutX="175.0" layoutY="365.0" onAction="#handleButtonAction" prefHeight="81.0" prefWidth="104.0" text=" ">
+                     <graphic>
+                        <ImageView id="next" fitHeight="80.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/next_page_100px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="pane4" fx:id="pane4" layoutX="641.0" prefHeight="467.0" prefWidth="414.0" style="-fx-background-color: #ffffff;" visible="false">
+               <children>
+                  <JFXButton id="result" fx:id="result" alignment="BASELINE_LEFT" layoutX="149.0" layoutY="392.0" onAction="#handleButtonAction" prefHeight="51.0" prefWidth="156.0" styleClass="button1" stylesheets="@../css/css.css" text="Search " textFill="#fffdfd">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/search_property_100px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="8.0" layoutY="115.0" prefHeight="30.0" prefWidth="184.0" text="Select maximum image result" />
+                  <Slider fx:id="prefferedmaximage" blockIncrement="1.0" layoutX="50.0" layoutY="162.0" majorTickUnit="2.0" max="15.0" min="1.0" minorTickCount="1" prefHeight="38.0" prefWidth="362.0" showTickLabels="true" showTickMarks="true" value="3.0" />
+                  <JFXButton fx:id="advanced" layoutX="14.0" layoutY="243.0" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="100.0" textFill="#0a1df7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <Label prefHeight="30.0" prefWidth="79.0" style="-fx-underline: true;" text="Advanced  " textFill="#0a1df7" />
+                     </graphic>
+                  </JFXButton>
+                  <AnchorPane fx:id="advanced_anchor" layoutX="24.0" layoutY="273.0" prefHeight="98.0" prefWidth="429.0">
+                     <children>
+                        <Label layoutX="7.0" layoutY="6.0" prefHeight="30.0" prefWidth="416.0" text="Choosing threshold is recommended for better programme performance" />
+                        <Slider fx:id="wheight1" blockIncrement="1.0" layoutX="34.0" layoutY="60.0" majorTickUnit="2.0" min="1.0" minorTickCount="1" prefHeight="38.0" prefWidth="362.0" showTickLabels="true" showTickMarks="true" value="15.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-2.0" layoutY="-3.0" prefHeight="458.0" prefWidth="132.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <JFXButton id="home" fx:id="home" layoutY="179.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="127.0" ripplerFill="#6677e7" text="Home">
+                     <font>
+                        <Font name="Gill Sans MT" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="addimages" fx:id="addimages1" alignment="BASELINE_LEFT" layoutY="242.0" onAction="#ImagefolderFilechooser" prefHeight="37.0" prefWidth="138.0" styleClass="button1" stylesheets="@../css/css.css" text="add to db" textFill="#fffdfd">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/add_database_26px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="closebtn" layoutX="-10.0" layoutY="-11.0" onAction="#closeButtonAction" prefHeight="30.0" prefWidth="34.0" ripplerFill="#ffffff00" text="X" textFill="#757373">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="minimisebtn" alignment="TOP_CENTER" layoutX="27.0" layoutY="-11.0" onAction="#minimiseButtonAction" prefHeight="35.0" prefWidth="42.0" ripplerFill="#ffffff00" text="-" textFill="#8d8686">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="home" fx:id="search" alignment="BASELINE_LEFT" layoutY="292.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="127.0" ripplerFill="#6677e7" text="More info">
+                     <font>
+                        <Font name="Gill Sans MT" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/user_manual_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="uploading" layoutX="639.0" prefHeight="468.0" prefWidth="453.0" style="-fx-background-color: #fffff;" visible="false">
+               <children>
+                  <Label layoutX="140.0" layoutY="279.0" text="uploading images to Database ..." />
+                  <JFXSpinner layoutX="191.0" layoutY="187.0" prefHeight="68.0" prefWidth="71.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="success" layoutX="640.0" prefHeight="478.0" prefWidth="462.0" style="-fx-background-color: #ffffff;" visible="false">
+               <children>
+                  <AnchorPane layoutX="-2.0" layoutY="139.0" prefHeight="200.0" prefWidth="462.0">
+                     <children>
+                        <ImageView fitHeight="126.0" fitWidth="149.0" layoutX="180.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/true.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="ipload_label" layoutX="110.0" layoutY="123.0" prefHeight="35.0" prefWidth="242.0" text="uploading image to database">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ipload_label1" layoutX="145.0" layoutY="158.0" prefHeight="35.0" prefWidth="173.0" text="finished with success">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="bluepane" layoutX="122.0" prefHeight="513.0" prefWidth="518.0" style="-fx-background-color: #1A33D5;">
+         <children>
+            <AnchorPane id="panelogo" fx:id="panelogo" layoutX="85.0" layoutY="57.0" prefHeight="370.0" prefWidth="362.0">
+               <children>
+                  <ImageView fitHeight="280.0" fitWidth="327.0" layoutX="41.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/naruto_sign_400px.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="78.0" layoutY="274.0" prefHeight="43.0" prefWidth="208.0" text="Imgae Finder" textFill="#d0d0d0">
+                     <font>
+                        <Font name="Arial" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="myresultimages" prefHeight="515.0" prefWidth="518.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

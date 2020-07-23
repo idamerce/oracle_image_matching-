@@ -1,0 +1,40 @@
+.text-input{
+    -fx-text-fill:  #ffffff ; 
+    -fx-prompt-text-fill: #D4CEE3 ; 
+}
+.button1{
+    -fx-background-color: #2262c6 ; 
+    -fx-text-fill:  #ffffff  ;
+}
+.button1:hover{
+    -fx-text-fill: #A7B3C4  ;
+}
+.button1:pressed{
+    -fx-text-fill: #80AFF5 ;
+}
+.button1:active{
+    -fx-text-fill: #80AFF5 ;
+}
+
+
+
+.button2{
+    -fx-background-color: #ffffff ; 
+    -fx-background-radius: 20 ; 
+    -fx-text-fill:  #2262c6 ; 
+}
+.button2:hover{
+    -fx-background-color: #E4EEFD; 
+    -fx-background-radius: 20 ; 
+    -fx-text-fill:  #2262c6 ; 
+}
+.button2:pressed{
+   -fx-background-color: #E4EEFD ; 
+    -fx-background-radius: 20 ; 
+    -fx-text-fill:  #2262c6 ; 
+}
+
+
+
+
+
